@@ -6,9 +6,15 @@
 
 Документация(на данный момент: [URL](http://localhost:9191/ws/docs)
 
-Запуск python-приложения
+## Инструкция по запуску бота
+#### Ubuntu
+##### Бэкенд
+Версия python на момент разработки: ```python3.8```
+Установка всех необходимых пакетов для бэкенд части командой:```pip install -r requirements.txt```
+Запуск бэкенда:
 
 ```
+cd ./backend
 make
 ```
 
@@ -16,15 +22,21 @@ make
 
 ```bash
 cd ./backend
-pip3 install poetry
 poetry install
 poetry run start
 ```
-
-Запуск svelte-приложения
-
+##### Фронтенд
+Установка Nodejs: ```sudo apt install nodejs```
+Установка последней версии Nodejs:
+```
+sudo npm install -g n
+n latest
+```
+```hash -r``` если node -v выдает старую версию (версия на момент разработки v18.10.0).
+Далее:
 
 ```
+cd ./frontend
 make
 ```
 
@@ -35,3 +47,6 @@ cd ./frontend
 npm i
 npm run dev
 ```
+
+#### Windows
+
